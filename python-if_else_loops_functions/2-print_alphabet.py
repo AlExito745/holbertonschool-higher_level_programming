@@ -1,3 +1,4 @@
 #!/usr/bin/python3
 for lwcas in range(97,123):
-	print(chr(lwcas),end="")
+	lwcas = chr(lwcas)
+	print("{}".format(lwcas),end="")
