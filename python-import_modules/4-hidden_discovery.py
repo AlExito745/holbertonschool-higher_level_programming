@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 # Executing module as script
-if __name__ == "__name__":
+if __name__ == "__main__":
 
     # importing module
     import hidden_4
