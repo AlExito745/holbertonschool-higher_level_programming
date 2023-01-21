@@ -7,7 +7,7 @@ if __name__ == "__main__":
 
     # total arguments
     n = len(sys.argv) - 1
-    print("{} argument:".format(n))
+    print("{} arguments:".format(n))
 
     # arguments passed
     for i in range(n):
