@@ -10,7 +10,7 @@ if __name__ == "__main__":
 
     # passed arguments
     if n == 0:
-        print("{} argument.".format(n))
+        print("{} arguments.".format(n))
 
     elif n == 1:
         print("{} argument:".format(n))
