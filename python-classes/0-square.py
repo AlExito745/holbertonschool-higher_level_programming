@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+# 0-square.py
+# Alex Nuñez <5694@holbertonstudents.com>
+"""Define a class Square."""
+
+
 class Square:
-# Create an empty class with no attributes or methods.
+    """Represent a square."""
     pass
