@@ -1,5 +1,5 @@
 # 3-say_my_name.txt
-# Brennan D Baraban <375@holbertonschool.com>
+# Alex Nuñez <5694@holbertonschool.com>
 
 ===========================
 How to Use 3-say_my_name.py
@@ -15,8 +15,8 @@ Usage
 ::
 
     >>> say_my_name = __import__('3-say_my_name').say_my_name
-    >>> say_my_name("Brennan", "Baraban")
-    My name is Brennan Baraban
+    >>> say_my_name("Alex", "Nuñez")
+    My name is Alex Nuñez
 
 ::
 
@@ -28,8 +28,8 @@ an empty string is printed instead.
 
 ::
 
-    >>> say_my_name("Brennan")
-    My name is Brennan 
+    >>> say_my_name("Marcus")
+    My name is Marcus
 
 Invalid Names
 =============
