@@ -3,6 +3,7 @@
 # Alex Nuñez <5694@holbertonstudents.com>
 """Define a class Rectangle."""
 
+
 class Rectangle:
     """Represent a rectangle."""
     pass
