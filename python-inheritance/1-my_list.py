@@ -9,5 +9,4 @@ class MyList(list):
 
     def print_sorted(self):
         """Function that print a list in ascending sort."""
-        all(isinstance(item, int) for item in self)
         print(sorted(self))
