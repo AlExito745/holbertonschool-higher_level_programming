@@ -23,16 +23,16 @@ class Rectangle(Base):
             ValueError (width, height): <name attribute> must be > 0.
             ValueError (x, y): <name attribute> must be >= 0
         """
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
         super().__init__(id)
 
     @property
     def width(self):
         """Set/get the width of the Rectangle."""
-        return(self.__width)
+        return self.__width
 
     @width.setter
     def width(self, value):
@@ -45,7 +45,7 @@ class Rectangle(Base):
     @property
     def height(self):
         """Set/get the height of the Rectangle."""
-        return(self.__height)
+        return self.__height
 
     @height.setter
     def height(self, value):
@@ -58,7 +58,7 @@ class Rectangle(Base):
     @property
     def x(self):
         """Set/get the x coordinate of the Rectangle."""
-        return(self.__x)
+        return self.__x
 
     @x.setter
     def x(self, value):
@@ -71,7 +71,7 @@ class Rectangle(Base):
     @property
     def y(self):
         """Set/get the y coordinate of the Rectangle."""
-        return(self.__y)
+        return self.__y
 
     @y.setter
     def y(self, value):
@@ -83,7 +83,7 @@ class Rectangle(Base):
 
     def area(self):
         """Calculate the area of Rectangle instances."""
-        return(self.__width * self.__height)
+        return self.__width * self.__height
 
     def display(self):
         """Print Rectangle instances with the character #."""
