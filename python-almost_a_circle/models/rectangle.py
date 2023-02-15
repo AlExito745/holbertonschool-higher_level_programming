@@ -23,7 +23,6 @@ class Rectangle(Base):
             ValueError (width, height): <name attribute> must be > 0.
             ValueError (x, y): <name attribute> must be >= 0
         """
-
         self.__width = width
         self.__height = height
         self.__x = x
