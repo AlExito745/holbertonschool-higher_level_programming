@@ -96,6 +96,6 @@ class Rectangle(Base):
     def __str__(self):
         """Return the string representation of a new instance
         of the class Rectangle."""
-        return("[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
-                                                       self.x, self.y,
-                                                       self.width, self.height))
+        str = "[Rectangle] ({})".format(self.id)
+        str += " {}/{} - {}/{}".format(self.x, self.y, self.width, self.height)
+        return(str)
