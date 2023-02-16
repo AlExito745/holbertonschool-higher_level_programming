@@ -32,10 +32,11 @@ class Rectangle(Base):
     @property
     def width(self):
         """Set/get the width of the Rectangle."""
-        return self.__width
+        return(self.__width)
 
     @width.setter
     def width(self, value):
+        print(type(value))
         if type(value) is not int:
             raise TypeError("width must be an integer")
         if value <= 0:
@@ -45,7 +46,7 @@ class Rectangle(Base):
     @property
     def height(self):
         """Set/get the height of the Rectangle."""
-        return self.__height
+        return(self.__height)
 
     @height.setter
     def height(self, value):
@@ -58,7 +59,7 @@ class Rectangle(Base):
     @property
     def x(self):
         """Set/get the x coordinate of the Rectangle."""
-        return self.__x
+        return(self.__x)
 
     @x.setter
     def x(self, value):
@@ -71,7 +72,7 @@ class Rectangle(Base):
     @property
     def y(self):
         """Set/get the y coordinate of the Rectangle."""
-        return self.__y
+        return(self.__y)
 
     @y.setter
     def y(self, value):
@@ -83,7 +84,7 @@ class Rectangle(Base):
 
     def area(self):
         """Calculate the area of Rectangle instances."""
-        return self.__width * self.__height
+        return(self.__width * self.__height)
 
     def display(self):
         """Print Rectangle instances with the character #."""
@@ -91,3 +92,9 @@ class Rectangle(Base):
             for j in range(self.__width):
                 print("#", end="")
             print()
+
+    def __str__(self):
+        """Customize the string representation of an instance of a class."""
+        str = "[Rectangle]" + " ({})".format(self.id)
+        str += " {}/{} - {}/{}".format(self.x, self.y, self.width, self.height)
+        return(str)
