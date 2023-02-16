@@ -88,10 +88,15 @@ class Rectangle(Base):
 
     def display(self):
         """Prints in stdout the new instance Rectangle with the character #."""
-        for i in range(self.height):
-            for j in range(self.width):
-                print("#", end="")
-            print()
+        if self.height == 0 and self.width == 0:
+            print("")
+            return
+
+        [print("") for y in range(self.y)]
+        for h in range(self.height):
+            [print(" ", end="") for x in range(self.x)]
+            [print("#", end="") for w in range(self.width)]
+            print("")
 
     def __str__(self):
         """Return the string representation of a new instance
