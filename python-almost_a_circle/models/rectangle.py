@@ -6,10 +6,10 @@ from models.base import Base
 
 
 class Rectangle(Base):
-    """Create a class Rectangle."""
+    """Create a new instances class of Rectangle."""
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        """Initialize a new Rectangle.
+        """Initialize each new instances class of Rectangle.
 
         Args:
             width (int): The width of the new Rectangle.
@@ -23,6 +23,7 @@ class Rectangle(Base):
             ValueError (width, height): <name attribute> must be > 0.
             ValueError (x, y): <name attribute> must be >= 0
         """
+
         self.width = width
         self.height = height
         self.x = x
@@ -36,7 +37,6 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, value):
-        print(type(value))
         if type(value) is not int:
             raise TypeError("width must be an integer")
         if value <= 0:
@@ -83,18 +83,19 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
-        """Calculate the area of Rectangle instances."""
-        return(self.__width * self.__height)
+        """Calculate the area of a new instances of class Rectangle."""
+        return(self.height * self.width)
 
     def display(self):
-        """Print Rectangle instances with the character #."""
-        for i in range(self.__height):
-            for j in range(self.__width):
+        """Prints in stdout the new instance Rectangle with the character #."""
+        for i in range(self.height):
+            for j in range(self.width):
                 print("#", end="")
             print()
 
     def __str__(self):
-        """Customize the string representation of an instance of a class."""
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
+        """Return the string representation of a new instance
+        of the class Rectangle."""
+        return("[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
                                                        self.x, self.y,
-                                                       self.width, self.height)
+                                                       self.width, self.height))
