@@ -95,6 +95,6 @@ class Rectangle(Base):
 
     def __str__(self):
         """Customize the string representation of an instance of a class."""
-        str = "[Rectangle]" + " ({})".format(self.id)
-        str += " {}/{} - {}/{}".format(self.x, self.y, self.width, self.height)
-        return(str)
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
+                                                       self.x, self.y,
+                                                       self.width, self.height)
