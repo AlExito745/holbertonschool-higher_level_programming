@@ -1,12 +1,8 @@
 #!/usr/bin/python3
-# Alex Nuñez <5694@holbertonstudents.com>
-# 0-select_states.py
+#!/usr/bin/python3
 # List all states from the database hbtn_0e_0_usa.
-# Arguments:
-# <mysqlusername>
-# <mysql password>
-# <mysql database name>
-    
+# Usage: ./0-select_states.py <mysql username> \ <mysql password> \ <database name>
+
 
 import MySQLdb
 
