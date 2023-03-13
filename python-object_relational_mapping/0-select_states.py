@@ -10,7 +10,7 @@ import MySQLdb
 if __name__ == "__main__":
     db = MySQLdb.connect(user="mysql username", passwd="mysql password", db="database name")
     c = db.cursor()
-    c.execute("SELECT * FROM `states` ORDER BY `id`")
+    c.execute("SELECT * FROM `states`")
     dt = c.fetchall()
     for row in dt:
         print(row)
