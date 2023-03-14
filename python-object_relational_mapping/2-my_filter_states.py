@@ -1,11 +1,13 @@
 #!/usr/bin/python3
-"""Take an argument and display all values of a table on database.
+"""Displays all values in the states table of the database hbtn_0e_0_usa
+whose name matches that supplied as argument.
 Arguments:
 <mysql username>
 <mysql password>
 <database name>
 <state name searched>
 """
+
 
 import sys
 import MySQLdb
