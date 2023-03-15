@@ -13,7 +13,8 @@ import MySQLdb
 if __name__ == '__main__':
     db = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
     c = db.cursor()
-    query = "SELECT `c`.`id`, `c`.`name`, `s`.`name` FROM `cities` AS `c` RIGHT JOIN `states` AS `s`"
+    query = "SELECT `c`.`id`, `c`.`name`, `s`.`name` FROM `cities` AS `c` \
+        INNER JOIN `states` AS `s`"
     query += "ON `c`.`state_id` = `s`.`id` ORDER BY `c`.`id` ASC"
     c.execute(query)
     result = c.fetchall()
