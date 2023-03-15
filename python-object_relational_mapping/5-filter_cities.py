@@ -20,6 +20,6 @@ if __name__ == '__main__':
     query += "ON `c`.`state_id` = `s`.`id` ORDER BY `c`.`id` ASC"
     c.execute(query)
     result = c.fetchall()
-    for data in result:
-        if sys.argv[4] == data[4]:
-            print("{}".format(data[2], sep=", "))
+    print(", ".join([data[2] for data in result if sys.argv[4] == data[4]]))
+    c.close()
+    db.close()
