@@ -19,9 +19,8 @@ if __name__ == "__main__":
     engine = create_engine(db, pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
     session = Session()
-
-    states = session.query(State)
+    
+    states = session.query(State).filter(State.name.like("%a%")).all()
     for state in states:
-        if "%a%" in state.name:
-            session.delete(state)
+        session.delete(state)
     session.commit()
